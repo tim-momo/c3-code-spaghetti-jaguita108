@@ -15,7 +15,7 @@
             align-items: flex-start;
             font-family: "Poppins", sans-serif;
         }
-        .carte {
+        .product-card {
             width: 300px;
             border: 1px solid #b6b6be;
             padding: 20px;
@@ -23,31 +23,31 @@
             background: white;
             border-radius: 8px;
         }
-        .carte img {
+        .product-card__image {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 4px;
         }
-        .carte h2 {
+        .product-card__title {
             font-size: 24px;
             color: #2c3e50;
             margin: 15px 0 10px 0;
             font-weight: 600;
         }
-        .carte p {
+        .product-card__description {
             font-size: 14px;
             color: #7f8c8d;
             margin: 0 0 15px 0;
             line-height: 1.6;
         }
-        .carte .prix {
+        .product-card__price {
             font-size: 20px;
             color: #27ae60;
             font-weight: bold;
             margin: 0 0 15px 0;
         }
-        .carte button {
+        .product-card__button {
             background: #3498db;
             color: white;
             border: none;
@@ -57,7 +57,7 @@
             font-size: 14px;
             width: 100%;
         }
-        .carte button:hover {
+        .product-card__button:hover {
             background: #2980b9;
         }
         .badge {
@@ -71,7 +71,7 @@
             top: 10px;
             right: 10px;
         }
-        .carte-2 {
+        .mini-card {
             width: 300px;
             border: 1px solid #b6b6be;
             padding: 20px;
@@ -81,23 +81,23 @@
             display: flex;
             gap: 15px;
         }
-        .carte-2 img {
+        .mini-card__image {
             width: 100px;
             height: 100px;
             object-fit: cover;
             border-radius: 4px;
         }
-        .carte-2 h3 {
+        .mini-card__title {
             font-size: 14px;
             color: #2c3e50;
             margin: 0 0 8px 0;
         }
-        .carte-2 p {
+        .mini-card__description {
             font-size: 10px;
             color: #7f8c8d;
             margin: 0 0 17px 0;
         }
-        .carte-2 button {
+        .mini-card__button {
             background: #3498db;
             color: white;
             border: none;
@@ -107,11 +107,11 @@
             font-size: 10px;
             width: 100%;
         }
-        .carte-2 button:hover {
+        .mini-card__button:hover {
             background: #2980b9;
         }
 
-        .carte-3 {
+        .product-card--new {
             width: 300px;
             border: 3px solid #e74c3c;
             padding: 20px;
@@ -120,72 +120,50 @@
             border-radius: 8px;
             position: relative;
         }
-        .carte-3 img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        .carte-3 h2 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin: 15px 0 10px 0;
-            font-weight: 600;
-        }
-        .carte-3 p {
-            font-size: 14px;
-            color: #7f8c8d;
-            margin: 0 0 15px 0;
-            line-height: 1.6;
-        }
-        .prix-2 {
-            font-size: 20px;
-            color: #27ae60;
-            font-weight: bold;
-            margin: 0 0 15px 0;
-        }
-        .carte-3 button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 14px;
-            width: 100%;
-        }
-        .carte-3 button:hover {
-            background: #2980b9;
-        }
     </style>
 </head>
 <body>
-    <div class="carte">
+
+<!--Carte 1-->
+
+    <div class="product-card">
    
-        <img src="https://static.photos/technology/320x240/37" alt="Produit">
-        <h2>Nom du Produit 1</h2>
-        <p>Description courte du produit qui donne envie d'acheter.</p>
-        <div class="prix">1149,99 $</div>
-        <button>Ajouter au panier</button>
+        <img class="product-card__image"
+            src="https://static.photos/technology/320x240/37"
+            alt="Produit">
+        <h2 class="product-card__title">Nom du Produit 1</h2>
+        <p class="product-card__description">
+            Description courte du produit qui donne envie d'acheter.
+        </p>
+        <div class="product-card__price">1149,99 $</div>
+        <button class="product-card__button">Ajouter au panier</button>
     </div>
 
+<!--Carte 2-->
 
-    <div class="carte-2">
-        <img src="https://static.photos/technology/100x100/130" alt="Mini produit">
-        <div>
-            <h3>Nom du produit mini 2</h3>
-            <p>Description rapide</p>
-            <button>Ajouter au panier</button>
+    <div class="mini-card">
+        <img class="mini-card__image"
+            src="https://static.photos/technology/100x100/130"
+            alt="Mini produit">
+        <div class="mini-card__content">
+            <h3 class="mini-card__title">Nom du produit mini 2</h3>
+            <p class="mini-card__description">Description rapide</p>
+            <button class="mini-card__button">Ajouter au panier</button>
         </div>
     </div>
 
-    <div class="carte-3">
-        <span class="badge">NOUVEAU</span>
-        <img src="https://static.photos/gaming/320x240/30" alt="Produit">
-        <h2>Nom du Produit 3</h2>
-        <p>Description courte du produit qui donne envie d'acheter.</p>
-        <div class="prix-2">1120,99 $</div>
-        <button>Ajouter au panier</button>
+    <!--Carte 3-->
+
+    <div class="product-card--new">
+        <span class="product-card__badge">NOUVEAU</span>
+        <img class="product-card__image" 
+            src="https://static.photos/gaming/320x240/30" alt="Produit">
+        <h2 class="product-card__title">Nom du Produit 3</h2>
+        <p class="product-card__description">
+            Description courte du produit qui donne envie d'acheter.
+        </p>
+        <div class="product-card__price">1120,99 $</div>
+        <button class="product-card__button">Ajouter au panier</button>
     </div>
 </body>
 </html>
